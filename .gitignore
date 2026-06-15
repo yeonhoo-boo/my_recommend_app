@@ -1,0 +1,10 @@
+# Mac 시스템 파일
+.DS_Store
+
+# 파이썬 캐시 파일
+__pycache__/
+*.pyc
+
+# 가상환경 (사용할 경우)
+venv/
+env/
