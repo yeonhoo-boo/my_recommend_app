@@ -2,4 +2,4 @@ fastapi
 uvicorn
 pydantic
 transformers
-torch
+torch --index-url https://download.pytorch.org/whl/cpu

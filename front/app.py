@@ -20,13 +20,15 @@ if st.button("AI 맞춤 추천 받기"):
             try:
                 # Docker Compose 환경 내부의 'back' 컨테이너로 HTTP 통신 요청 (과제 필수 조건)
                 payload = {"text": user_text, "interest": interest}
+                
+                # 연후 님의 새로운 AI 백엔드 주소(/recommend)로 요청을 보냅니다!
                 response = requests.post("http://back:8000/recommend", json=payload)
                 
                 if response.status_code == 200:
                     result = response.json()
                     
                     # 3. 응답 결과를 화면에 이쁘게 표시
-                    st.success("🎯 분석이 완료되었습니다!")
+                    st.success("분석이 완료되었습니다!")
                     
                     col1, col2 = st.columns(2)
                     with col1:

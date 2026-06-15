@@ -1,14 +1,16 @@
-version: '3'
+version: '3.8'
 
 services:
   back:
     build: ./back
+    container_name: my_fastapi_server
     ports:
       - "8000:8000"
 
   front:
     build: ./front
+    container_name: my_streamlit_server
     ports:
-      - "8501:8501"
+      - "80:8501"  
     depends_on:
       - back
